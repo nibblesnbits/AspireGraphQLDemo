@@ -2,13 +2,11 @@
   "profiles": {
     "http": {
       "commandName": "Project",
-      "launchBrowser": false,
-      "launchUrl": "http://localhost:5095/graphql",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "dotnetRunMessages": true,
-      "applicationUrl": "http://localhost:5095"
+      "applicationUrl": "http://localhost:5000"
     }
   }
 }

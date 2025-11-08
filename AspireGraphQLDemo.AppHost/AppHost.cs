@@ -17,8 +17,17 @@ var booksGraph = builder.AddProject<Projects.Demo_UserGraph>("booksGraph")
     .WaitForCompletion(migrations)
     .WithHttpHealthCheck("/health");
 
-builder
+var gateway = builder
     .AddFusionGateway<Projects.AspireGraphQLDemo_Gateway>("gateway")
     .WithSubgraph(booksGraph);
+
+//builder.AddNpmApp("reactvite", "../web/vite-graphql")
+//    .WithReference(gateway)
+//    .WithWorkingDirectory("../web/vite-graphql")
+//    .WithCommand("npm run dev")
+//    .WithEnvironment("BROWSER", "none")
+//    .WithHttpEndpoint(env: "VITE_PORT")
+//    .WithExternalHttpEndpoints()
+//    .PublishAsDockerFile();
 
 builder.Build().Compose().Run();
