@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CatchARide.Auth.Web\CatchARide.Auth.Web.csproj" />
+    <ProjectReference Include="..\CatchARide.Auth\CatchARide.Auth.csproj" />
+    <ProjectReference Include="..\CatchARide.Configuration\CatchARide.Configuration.csproj" />
+    <ProjectReference Include="..\CatchARide.Kafka\CatchARide.Kafka.csproj" />
+    <ProjectReference Include="..\CatchARide.ServiceDefaults\CatchARide.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\CatchARide.Data\CatchARide.Data.csproj" />
+    <ProjectReference Include="..\CatchARide.Configuration.Analyzers\CatchARide.Configuration.Analyzers.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+    <ProjectReference Include="..\Monads\Monads.csproj" />
+    <ProjectReference Include="..\Precision.WarpCache\Precision.WarpCache.Grpc.Client\Precision.WarpCache.Grpc.Client.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Confluent.Kafka" Version="9.5.2" />
+    <PackageReference Include="Aspire.Npgsql" Version="9.5.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.10" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.2" />
+    <PackageReference Include="Otp.NET" Version="1.4.0" />
+  </ItemGroup>
+
+</Project>
